@@ -18,7 +18,7 @@ let model = {
       let otp = Math.floor(1000 + Math.random() * 9000);
       let text = `Your OTP is ${otp}`
       console.log("Text: ", text)
-      // await SMS.send(data.mobile, text)
+      await SMS.send(data.mobile, text)
       success = myCache.set(data.mobile, otp, 300);
       return {
         status: true,
